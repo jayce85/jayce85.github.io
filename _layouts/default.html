@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {% include head.html %}
+
+    <body>
+    </body>
+
+    <body>
+        {% include browse_happy.html %}
+
+        <!-- Add your site or application content here -->
+        <div class="container content">
+            <div class="masthead">
+                <h3 class="masthead-title">
+                    <a href="/" title="Home">{{ site.title }}</a>
+                    <small>{{ site.tagline }}</small>
+                </h3>
+            </div>
+
+            {{ content }}
+
+            <div class="footer">
+                <p>
+                    &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+                </p>
+            </div>
+        </div>
+
+        {% include scripts.html %}
+
+    </body>
+</html>
