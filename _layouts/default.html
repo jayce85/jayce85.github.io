@@ -7,26 +7,37 @@
     {% include head.html %}
 
     <body>
-    </body>
 
-    <body>
         {% include browse_happy.html %}
+
+        {% if page.image.feature %}
+            <div class="entry-header">
+                {% if page.image.credit %}
+                    <div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div>
+                {% endif %}
+                <div class="entry-image">
+                    <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+                </div>
+            </div>
+        {% endif %}
 
         <!-- Add your site or application content here -->
         <div class="container content">
+            <!--
             <div class="masthead">
                 <h3 class="masthead-title">
                     <a href="/" title="Home">{{ site.title }}</a>
                     <small>{{ site.tagline }}</small>
                 </h3>
             </div>
+            -->
 
             {{ content }}
 
-            <div class="footer">
-                <p>
-                    &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-                </p>
+            <div class="footer-wrapper">
+                <footer role="contentinfo">
+                    {% include footer.html %}
+                </footer>
             </div>
         </div>
 

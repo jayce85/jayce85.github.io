@@ -1,11 +1,11 @@
 markdown: redcarpet
 pygments: true
 
-title:            Jonathan Trang
-description:      My website
+title: Jonathan Trang
+description: My website
 disqus_shortname: jon301
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://trangjon.com
+url: http://trangjon.com
 
 # Owner/author information
 owner:
@@ -36,8 +36,8 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-# timezone:    Europe/Paris
-# future:      true
+# timezone: Europe/Paris
+# future: true
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /:categories/:title/
@@ -45,4 +45,4 @@ permalink: /:categories/:title/
 # Amount of post to show on home page
 paginate: 5
 
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["bower.json", "package.json", "README.md", "gulpfile.js", "assets", "node_modules"]
