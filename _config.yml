@@ -1,8 +1,8 @@
 markdown: redcarpet
 pygments: true
 
-title: Jonathan Trang
-description: My website
+title: Blog
+description: Jonathan Trang's blog
 disqus_shortname: jon301
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url: http://trangjon.com
@@ -35,14 +35,9 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-# timezone: Europe/Paris
-# future: true
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:title/
+permalink: pretty
 
 # Amount of post to show on home page
-paginate: 5
+paginate: 2
 
-exclude: ["bower.json", "package.json", "README.md", "gulpfile.js", "assets", "node_modules"]
+exclude: ["bower.json", "package.json", "README.md", "gulpfile.js", "build.sh", "assets", "node_modules"]

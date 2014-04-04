@@ -1,0 +1,87 @@
+@import "core";
+
+/*
+ * Body resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+    @media (min-width: 38rem) {
+        font-size: 16px;
+    }
+}
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+    max-width: 50rem;
+}
+
+/*
+ * Header
+ *
+ */
+
+.header-wrap {
+    background: #a6d5c8;
+    position: relative;
+    margin-bottom: 3rem;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        border-bottom: 1px dashed #fff;
+        width: 100%;
+    }
+}
+
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1 {
+        font: normal 4rem 'Cookie', Helvetica, sans-serif;
+        margin: 0;
+        .symbol {
+            color: #f88391;
+            font-size: 2rem;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+/*
+ * Footer
+ *
+ */
+
+.footer-wrap {
+    background: #a6d5c8;
+    position: relative;
+    margin-top: 3rem;
+    color: #45776a;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        border-top: 1px dashed #fff;
+        width: 100%;
+    }
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    a {
+        color: #fff;
+    }
+}
