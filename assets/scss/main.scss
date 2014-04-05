@@ -21,7 +21,9 @@ html {
  */
 
 .container {
-    max-width: 50rem;
+    max-width: 60rem;
+    padding-left:  2rem;
+    padding-right: 2rem;
 }
 
 /*
@@ -84,4 +86,64 @@ html {
     a {
         color: #fff;
     }
+}
+
+/*
+ * Pagination
+ *
+ */
+
+.pagination {
+    @include horizontal-list(4px);
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.pagination li {
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.pagination a, .pagination span {
+    @include border-radius(3px);
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    background: #fdf4ec;
+    color: #F6697A;
+}
+
+.pagination a:hover, .pagination .current {
+    text-decoration: none;
+    background: #a6d5c8;
+    color: #fff;
+}
+
+/*
+ * Page heading
+ *
+ */
+
+.page-heading {
+    background: url("/images/dotted.png") left bottom repeat-x;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.page-heading h1,
+.page-heading h2 {
+    margin: 0;
+}
+
+
+.page-heading h1 {
+    color: #f06878;
+    font-size: 2.5rem;
+}
+.page-heading h2 {
+    font-size: 1rem;
+    margin-top: 10px;
 }
