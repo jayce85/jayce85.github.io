@@ -14,6 +14,10 @@ html {
     }
 }
 
+a {
+    @include link-colors(#4ea58d, #f06878);
+}
+
 /*
  * Container
  *
@@ -128,22 +132,39 @@ html {
  */
 
 .page-heading {
-    background: url("/images/dotted.png") left bottom repeat-x;
+    background: url("/public/images/2dots.png") left bottom repeat-x;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
-
-.page-heading h1,
-.page-heading h2 {
-    margin: 0;
-}
-
 
 .page-heading h1 {
+    margin: 0;
     color: #f06878;
     font-size: 2.5rem;
 }
-.page-heading h2 {
+.page-heading span {
+    display: block;
     font-size: 1rem;
     margin-top: 10px;
+}
+
+/*
+ * Articles
+ *
+ */
+
+.post-index article {
+    background: url("/public/images/3dots.png") left bottom repeat-x;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    header {
+        padding-bottom: 20px;
+        h2 {
+            margin-top: 0;
+            a {
+                color: #f06878;
+            }
+        }
+    }
 }
