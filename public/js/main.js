@@ -1,1 +1,1 @@
-console.log("Hello from JS");
+$(document).ready(function(){return $("article").fitVids()});

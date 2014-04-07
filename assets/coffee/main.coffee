@@ -1,1 +1,2 @@
-console.log ('Hello from JS')
+$(document).ready () ->
+    $('article').fitVids()

@@ -3,10 +3,6 @@ layout: post-index
 title: Latest Posts
 description: "Describe this nonsense."
 tags: [Jekyll, theme, themes, responsive, blog, modern]
-image:
-    feature: abstract-1.jpg
-    credit: dargadgetz
-    creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 {% for post in paginator.posts %}
@@ -24,6 +20,17 @@ image:
             {% endif %}
         </div>
     </header>
+
+    <!-- Post image -->
+    {% if post.image.feature %}
+        <div class="page-image">
+            {% if post.image.credit %}
+                <div class="image-credit">Image source: {% if post.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ post.image.credit }}{% if post.image.creditlink %}</a>{% endif %}</div>
+            {% endif %}
+            <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}">
+        </div>
+    {% endif %}
+
     <div class="content">
         {{ post.content }}
     </div>

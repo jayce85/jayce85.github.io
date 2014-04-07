@@ -7,16 +7,38 @@
  */
 
 html {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
     @media (min-width: 38rem) {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
 a {
     @include link-colors(#4ea58d, #f06878);
 }
+
+/*
+ * Headings
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+
+h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+h3 {
+    margin-top: 2.5rem;
+}
+h4, h5, h6 {
+    margin-top: 2rem;
+}
+
 
 /*
  * Container
@@ -49,8 +71,8 @@ a {
 }
 
 .header {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     h1 {
         font: normal 4rem 'Cookie', Helvetica, sans-serif;
         margin: 0;
@@ -64,6 +86,38 @@ a {
         }
     }
 }
+
+/*
+ * Featured image
+ *
+ */
+
+.page-image {
+    @include border-radius(3px);
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;
+    margin-bottom: 2rem;
+    .image-credit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: .5rem .7rem;
+        font-size: .75rem;
+        color: #fff;
+        background-color: rgba(34,34,34,0.5);
+        text-align: right;
+        a {
+            color: #fff;
+        }
+    }
+    img {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
 
 /*
  * Footer
@@ -85,8 +139,8 @@ a {
 }
 
 .footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     a {
         color: #fff;
     }
@@ -101,7 +155,7 @@ a {
     @include horizontal-list(4px);
     list-style: none;
     padding: 0;
-    margin-top: 80px;
+    margin-top: 4rem;
     li {
         height: 28px;
         line-height: 28px;
@@ -130,8 +184,8 @@ a {
 
 .page-heading {
     background: url("/public/images/dotted.png") left bottom repeat-x;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     h1 {
         margin: 0;
         color: #f06878;
@@ -154,11 +208,11 @@ a {
 
 .post-index article {
     background: url("/public/images/dotted.png") left bottom repeat-x;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 
     header {
-        padding-bottom: 20px;
+        padding-bottom: 2rem;
         h2 {
             margin-top: 0;
             a {
@@ -174,7 +228,7 @@ a {
  */
 
 .social-share {
-    padding: 30px 0;
+    padding: 2rem 0;
 }
 
 .fb-share-button {
@@ -192,5 +246,27 @@ a {
 
 #disqus_thread {
     background: url("/public/images/dotted.png") left top repeat-x;
-    padding-top: 20px;
+    padding-top: 1.5rem;
+}
+
+
+/*
+ * FitVids
+ *
+ */
+
+.fluid-width-video-wrapper {
+    margin-bottom: 1rem;
+}
+
+/*
+ * Code Blocks
+ *
+ */
+
+pre {
+    overflow-x: auto;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
 }
