@@ -102,28 +102,25 @@ a {
     list-style: none;
     padding: 0;
     margin-top: 80px;
-}
-
-.pagination li {
-    height: 28px;
-    line-height: 28px;
-    text-align: center;
-}
-
-.pagination a, .pagination span {
-    @include border-radius(3px);
-    display: block;
-    height: 28px;
-    line-height: 28px;
-    padding: 0 10px;
-    background: #fdf4ec;
-    color: #F6697A;
-}
-
-.pagination a:hover, .pagination .current {
-    text-decoration: none;
-    background: #a6d5c8;
-    color: #fff;
+    li {
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+    }
+    a, span {
+        @include border-radius(3px);
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 10px;
+        background: #fdf4ec;
+        color: #F6697A;
+    }
+    a:hover, .current {
+        text-decoration: none;
+        background: #a6d5c8;
+        color: #fff;
+    }
 }
 
 /*
@@ -132,20 +129,22 @@ a {
  */
 
 .page-heading {
-    background: url("/public/images/2dots.png") left bottom repeat-x;
+    background: url("/public/images/dotted.png") left bottom repeat-x;
     padding-bottom: 20px;
     margin-bottom: 40px;
-}
-
-.page-heading h1 {
-    margin: 0;
-    color: #f06878;
-    font-size: 2.5rem;
-}
-.page-heading span {
-    display: block;
-    font-size: 1rem;
-    margin-top: 10px;
+    h1 {
+        margin: 0;
+        color: #f06878;
+        font-size: 2.5rem;
+    }
+    a {
+        color: #f06878;
+    }
+    p {
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 10px;
+    }
 }
 
 /*
@@ -154,7 +153,7 @@ a {
  */
 
 .post-index article {
-    background: url("/public/images/3dots.png") left bottom repeat-x;
+    background: url("/public/images/dotted.png") left bottom repeat-x;
     padding-bottom: 20px;
     margin-bottom: 20px;
 
@@ -167,4 +166,31 @@ a {
             }
         }
     }
+}
+
+/*
+ * Social Share
+ *
+ */
+
+.social-share {
+    padding: 30px 0;
+}
+
+.fb-share-button {
+    vertical-align: top !important;
+    height: 20px !important;
+    span {
+        vertical-align: top !important;
+    }
+}
+
+/*
+ * Disqus
+ *
+ */
+
+#disqus_thread {
+    background: url("/public/images/dotted.png") left top repeat-x;
+    padding-top: 20px;
 }

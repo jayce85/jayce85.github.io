@@ -35,7 +35,8 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
-permalink: pretty
+# permalink: pretty
+permalink: /:year/:month/:day/:title/
 
 # Amount of post to show on home page
 paginate: 2

@@ -10,22 +10,21 @@ image:
 ---
 
 {% for post in paginator.posts %}
-<article>
+<article class="post">
     <header>
         {% if post.link %}
-            <h2 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h2>
+            <h2><a href="{{ post.link }}">&raquo; {{ post.title }}</a></h2>
         {% else %}
-            <h2 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h2>
+            <h2><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h2>
         {% endif %}
         <div>
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            <!-- &bull; <a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a> -->
             {% if site.disqus_shortname and post.comments %}
                 &bull; <a href="{{ site.url }}{{ post.url }}#disqus_thread">Comment</a>
             {% endif %}
         </div>
     </header>
-    <div class="entry-content">
+    <div class="content">
         {{ post.content }}
     </div>
 </article>
