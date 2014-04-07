@@ -3,20 +3,20 @@ layout: default
 layoutname: post
 ---
 
-<div id="main" role="main" class="post">
+<div id="main" role="main">
     <article>
 
         <div class="content">
             {{ content }}
 
             <footer>
-<!--                 <span>
+
+                <span>
                     {% for tag in page.tags %}
                         <a href="{{ site.url }}/tags/#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>
-                        {% unless forloop.last %}{% endunless %}
                     {% endfor %}
                 </span>
- -->
+
                 {% if page.share %}
 
                      <div class="social-share">
@@ -37,35 +37,28 @@ layoutname: post
             <section id="disqus_thread"></section>
         {% endif %}
 
-<!--         {% if site.related_posts.size %}
+        {% if site.related_posts.size %}
             <div class="read-more">
-                {% for post in site.related_posts limit:1 %}
-                    <div class="read-more-header">
-                        <a href="{{ site.url }}{{ page.previous.url }}" class="read-more-btn">Read More</a>
-                    </div>
-                    <div class="read-more-content">
-                        <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                <h2>Read more</h2>
+                {% for post in site.related_posts limit:3 %}
+                    <div class="more-item">
+                        <h3>
+                            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">&#x2736; {{ post.title }}</a>
+                            &bull; <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                        </h3>
                         <p>
                             {% if post.description %}
                                 {{ post.description }}
                             {% else %}
-                                {{ post.content | strip_html | strip_newlines | truncate: 140 }}&hellip;
+                                {{ post.content | strip_html | strip_newlines | truncate: 140 }}
+                                <a href="{{ site.url }}{{ post.url }}">Continue reading</a>
                             {% endif %}
-                            <a href="{{ site.url }}{{ post.url }}">Continue reading</a>
                         </p>
                     </div>
                 {% endfor %}
-                <div class="read-more-list">
-                    {% for post in site.related_posts limit:2 offset:1 %}
-                        <div class="list-item">
-                            <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-                            <span>Published on {{ post.date | date: "%B %d, %Y" }}</span>
-                        </div>
-                    {% endfor %}
-                </div>
             </div>
         {% endif %}
- -->
+
     </article>
 </div>
 

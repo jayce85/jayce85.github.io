@@ -5,67 +5,69 @@ description: "Describe this nonsense."
 tags: [Jekyll, theme, themes, responsive, blog, modern]
 ---
 
-{% for post in paginator.posts %}
-<article class="post">
-    <header>
-        {% if post.link %}
-            <h2><a href="{{ post.link }}">&raquo; {{ post.title }}</a></h2>
-        {% else %}
-            <h2><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h2>
-        {% endif %}
-        <div>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            {% if site.disqus_shortname and post.comments %}
-                &bull; <a href="{{ site.url }}{{ post.url }}#disqus_thread">Comment</a>
-            {% endif %}
-        </div>
-    </header>
-
-    <!-- Post image -->
-    {% if post.image.feature %}
-        <div class="page-image">
-            {% if post.image.credit %}
-                <div class="image-credit">Image source: {% if post.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ post.image.credit }}{% if post.image.creditlink %}</a>{% endif %}</div>
-            {% endif %}
-            <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}">
-        </div>
-    {% endif %}
-
-    <div class="content">
-        {{ post.content }}
-    </div>
-</article>
-{% endfor %}
-
-<ul class="pagination">
-    <li>
-        {% if paginator.previous_page %}
-            {% if paginator.previous_page == 1 %}
-                <a href="{{ site.url }}">&#x00AB;</a>
+<div class="index">
+    {% for post in paginator.posts %}
+    <article>
+        <header>
+            {% if post.link %}
+                <h2><a href="{{ post.link }}">&raquo; {{ post.title }}</a></h2>
             {% else %}
-                <a href="{{ site.url }}/page{{ paginator.previous_page }}">&#x00AB;</a>
+                <h2><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h2>
             {% endif %}
+            <div>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                {% if site.disqus_shortname and post.comments %}
+                    &bull; <a href="{{ site.url }}{{ post.url }}#disqus_thread">Comment</a>
+                {% endif %}
+            </div>
+        </header>
+
+        <!-- Post image -->
+        {% if post.image.feature %}
+            <div class="page-image">
+                {% if post.image.credit %}
+                    <div class="image-credit">Image source: {% if post.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ post.image.credit }}{% if post.image.creditlink %}</a>{% endif %}</div>
+                {% endif %}
+                <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}">
+            </div>
         {% endif %}
-    </li>
-    <li>
-        {% if paginator.page == 1 %}
-            <span class="current">1</span>
-        {% else %}
-            <a href="{{ site.url }}">1</a>
-        {% endif %}
-    </li>
-    {% for count in (2..paginator.total_pages) %}
+
+        <div class="content">
+            {{ post.content }}
+        </div>
+    </article>
+    {% endfor %}
+
+    <ul class="pagination">
         <li>
-            {% if count == paginator.page %}
-                <span class="current">{{ count }}</span>
-            {% else %}
-                <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
+            {% if paginator.previous_page %}
+                {% if paginator.previous_page == 1 %}
+                    <a href="{{ site.url }}">&#x00AB;</a>
+                {% else %}
+                    <a href="{{ site.url }}/page{{ paginator.previous_page }}">&#x00AB;</a>
+                {% endif %}
             {% endif %}
         </li>
-    {% endfor %}
-    <li>
-        {% if paginator.next_page %}
-            <a href="{{ site.url }}/page{{ paginator.next_page }}">&#x00BB;</a>
-        {% endif %}
-    </li>
-</ul>
+        <li>
+            {% if paginator.page == 1 %}
+                <span class="current">1</span>
+            {% else %}
+                <a href="{{ site.url }}">1</a>
+            {% endif %}
+        </li>
+        {% for count in (2..paginator.total_pages) %}
+            <li>
+                {% if count == paginator.page %}
+                    <span class="current">{{ count }}</span>
+                {% else %}
+                    <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+        <li>
+            {% if paginator.next_page %}
+                <a href="{{ site.url }}/page{{ paginator.next_page }}">&#x00BB;</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>

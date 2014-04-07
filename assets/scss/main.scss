@@ -206,7 +206,7 @@ h4, h5, h6 {
  *
  */
 
-.post-index article {
+.index article {
     background: url("/public/images/dotted.png") left bottom repeat-x;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
@@ -228,7 +228,7 @@ h4, h5, h6 {
  */
 
 .social-share {
-    padding: 2rem 0;
+    margin-top: 2rem;
 }
 
 .fb-share-button {
@@ -247,6 +247,7 @@ h4, h5, h6 {
 #disqus_thread {
     background: url("/public/images/dotted.png") left top repeat-x;
     padding-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 
@@ -284,5 +285,34 @@ pre {
     &::-webkit-scrollbar-thumb {
         @include border-radius(6px);
         background: #ccc;
+    }
+}
+
+/*
+ * Read more
+ *
+ */
+
+.read-more {
+    background: url("/public/images/dotted.png") left top repeat-x;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+
+    h2 {
+        color: #f06878;
+        margin-top: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .more-item {
+        margin-bottom: 2rem;
     }
 }
