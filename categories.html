@@ -5,18 +5,18 @@ title: Category Archive
 description: "An archive of posts sorted by categories."
 ---
 
-<div class="categories">
-    <ul class="entry-meta inline-list">
+<div class="categories column full">
+    <ul>
     {% assign categories_list = site.categories %}
-      {% if categories_list.first[0] == null %}
+    {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
             <li><a href="#{{ category }}" class="category">{{ category }} <span>{{ site.categories[category].size }}</span></a></li>
         {% endfor %}
-      {% else %}
+    {% else %}
         {% for category in categories_list %}
             <li><a href="#{{ category[0] }}" class="category">{{ category[0] }} <span>{{ category[1].size }}</span></a></li>
         {% endfor %}
-      {% endif %}
+    {% endif %}
     {% assign categories_list = nil %}
     </ul>
 
@@ -28,13 +28,13 @@ description: "An archive of posts sorted by categories."
             {% for post in pages_list %}
                 {% if post.title != null %}
                 {% if group == null or group == post.group %}
-                    <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                    <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
                 {% endif %}
                 {% endif %}
             {% endfor %}
             {% assign pages_list = nil %}
             {% assign group = nil %}
             </ul>
-        </article><!-- /.hentry -->
+        </article>
     {% endfor %}
 </div>

@@ -3,35 +3,31 @@ layout: default
 layoutname: post
 ---
 
-<div id="main" role="main">
-    <article>
+<div id="main" role="main" class="row clearfix">
+    <article class="column full">
 
-        <div class="content">
-            {{ content }}
+        {{ content }}
 
-            <footer>
+        <footer>
+            <div>
+                {% for tag in page.tags %}
+                    <a href="{{ site.url }}/tags/#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
 
-                <span>
-                    {% for tag in page.tags %}
-                        <a href="{{ site.url }}/tags/#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>
-                    {% endfor %}
-                </span>
+            {% if page.share %}
+                 <div class="social-share">
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}">Tweet</a>
 
-                {% if page.share %}
+                    <!-- Google + -->
+                    <g:plusone size="medium"></g:plusone>
 
-                     <div class="social-share">
-                        <!-- Twitter -->
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}">Tweet</a>
-
-                        <!-- Google + -->
-                        <g:plusone size="medium"></g:plusone>
-
-                        <!-- Facebook -->
-                        <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></div>
-                    </div>
-                {% endif %}
-            </footer>
-        </div>
+                    <!-- Facebook -->
+                    <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></div>
+                </div>
+            {% endif %}
+        </footer>
 
         {% if site.disqus_shortname and page.comments %}
             <section id="disqus_thread"></section>

@@ -23,21 +23,21 @@ Here are some examples of what a post with images might look like. If you want t
 Apply the `half` class like so to display two images side by side that share the same caption.
 
 {% highlight html %}
-<figure class="half">
-	<img src="/images/image-filename-1.jpg" alt="">
-	<img src="/images/image-filename-2.jpg" alt="">
+<figure class="row clearfix">
+	<img class="column half" src="/images/image-filename-1.jpg" alt="">
+	<img class="column half" src="/images/image-filename-2.jpg" alt="">
 	<figcaption>Caption describing these two images.</figcaption>
 </figure>
 {% endhighlight %}
 
 And you'll get something that looks like this:
 
-<figure class="half">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<img src="http://placehold.it/600x300.jpg" alt="">
-	<img src="http://placehold.it/600x300.jpg" alt="">
-	<figcaption>Two images.</figcaption>
+<figure class="row clearfix">
+	<a class="column half" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column half" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<img class="column half" src="http://placehold.it/600x300.jpg" alt="">
+	<img class="column half" src="http://placehold.it/600x300.jpg" alt="">
+	<figcaption class="column full">Two images.</figcaption>
 </figure>
 
 ### Three Up
@@ -45,22 +45,22 @@ And you'll get something that looks like this:
 Apply the `third` class like so to display three images side by side that share the same caption.
 
 {% highlight html %}
-<figure class="third">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<figcaption>Caption describing these three images.</figcaption>
+<figure class="row clearfix">
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<figcaption class="column full">Caption describing these three images.</figcaption>
 </figure>
 {% endhighlight %}
 
 And you'll get something that looks like this:
 
-<figure class="third">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
-	<figcaption>Three images.</figcaption>
+<figure class="row clearfix">
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<a class="column third" href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
+	<figcaption class="column full">Three images.</figcaption>
 </figure>

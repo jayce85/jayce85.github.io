@@ -10,48 +10,55 @@
 
         {% include browse_happy.html %}
 
-        {% include header.html %}
+        <div id="root">
+            {% include header.html %}
 
-        <div class="container content">
+            <div class="container content">
 
-            <!-- Page title -->
-            <div class="page-heading">
+                <div class="row clearfix">
+                    <div class="column full">
+                        <!-- Page title -->
+                        <div class="page-heading">
 
-                {% if page.layoutname == 'post' %}
+                            {% if page.layoutname == 'post' %}
 
-                    <!-- Post -->
-                    {% if page.link %}
-                        <h1><a href="{{ page.link }}" rel="bookmark" title="{{ page.title }}">&raquo; {{ page.title }}</a></h1>
-                    {% else %}
-                        <h1>{{ page.title }}</h1>
-                    {% endif %}
-                    <p>
-                        <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-                    {% if page.modified %}
-                        &bull; Revised: <time datetime="{{ page.modified }}">{{ page.modified | date: "%B %d, %Y" }}</time>
-                    {% endif %}
-                    </p>
+                                <!-- Post -->
+                                {% if page.link %}
+                                    <h1><a href="{{ page.link }}" rel="bookmark" title="{{ page.title }}">&raquo; {{ page.title }}</a></h1>
+                                {% else %}
+                                    <h1>{{ page.title }}</h1>
+                                {% endif %}
+                                <p>
+                                    <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                                {% if page.modified %}
+                                    &bull; Revised: <time datetime="{{ page.modified }}">{{ page.modified | date: "%B %d, %Y" }}</time>
+                                {% endif %}
+                                </p>
 
-                {% else %}
+                            {% else %}
 
-                    <!-- Other -->
-                    <h1>{{ page.title }}</h1>
+                                <!-- Other -->
+                                <h1>{{ page.title }}</h1>
 
-                {% endif %}
+                            {% endif %}
 
-            </div>
+                        </div>
 
-            <!-- Page image -->
-            {% if page.image.feature %}
-                <div class="page-image">
-                    {% if page.image.credit %}
-                        <div class="image-credit">Image source: {% if page.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ page.image.credit }}{% if page.image.creditlink %}</a>{% endif %}</div>
-                    {% endif %}
-                    <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+                        <!-- Page image -->
+                        {% if page.image.feature %}
+                            <div class="page-image">
+                                {% if page.image.credit %}
+                                    <div class="image-credit">Image source: {% if page.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ page.image.credit }}{% if page.image.creditlink %}</a>{% endif %}</div>
+                                {% endif %}
+                                <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
-            {% endif %}
 
-            {{ content }}
+                {{ content }}
+            </div>
+            <div id="push-footer"></div>
         </div>
 
         {% include footer.html %}
