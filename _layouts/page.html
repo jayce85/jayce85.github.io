@@ -4,27 +4,19 @@ layoutname: page
 ---
 
 <div id="main" role="main" class="row clearfix">
-    <article>
-        {{ content }}
+    {{ content }}
 
-        {% if page.share %}
-            <footer>
-                 <div class="social-share">
-                    <!-- Twitter -->
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}">Tweet</a>
+    {% if page.share %}
+         <div class="social-share">
+            <!-- Twitter -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}">Tweet</a>
 
-                    <!-- Google + -->
-                    <g:plusone size="medium"></g:plusone>
+            <!-- Google + -->
+            <g:plusone size="medium"></g:plusone>
 
-                    <!-- Facebook -->
-                    <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></div>
-                </div>
-            </footer>
-        {% endif %}
-
-        {% if site.disqus_shortname and page.comments %}
-            <section id="disqus_thread"></section>
-        {% endif %}
-    </article>
+            <!-- Facebook -->
+            <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></div>
+        </div>
+    {% endif %}
 </div>
 

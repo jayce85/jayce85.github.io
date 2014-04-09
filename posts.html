@@ -11,7 +11,7 @@ description: "An archive of posts."
         {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
         {% if forloop.first %}
-            <article>
+            <div>
                 <h2 id="{{ this_year }}-ref">{{ this_year }}</h2>
                 <ul>
         {% endif %}
@@ -20,12 +20,12 @@ description: "An archive of posts."
 
         {% if forloop.last %}
                 </ul>
-            </article>
+            </div>
         {% else %}
             {% if this_year != next_year %}
                 </ul>
-            </article>
-            <article>
+            </div>
+            <div>
                 <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
                 <ul>
             {% endif %}

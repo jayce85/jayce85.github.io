@@ -6,7 +6,7 @@ description: "An archive of posts sorted by tag."
 ---
 
 <div class="tags column full">
-    <ul class="entry-meta inline-list">
+    <ul>
     {% assign tags_list = site.tags %}
         {% if tags_list.first[0] == null %}
             {% for tag in tags_list %}
@@ -21,7 +21,7 @@ description: "An archive of posts sorted by tag."
     </ul>
 
     {% for tag in site.tags %}
-        <article>
+        <div>
         <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
             <ul>
             {% assign pages_list = tag[1] %}
@@ -35,6 +35,6 @@ description: "An archive of posts sorted by tag."
             {% assign pages_list = nil %}
             {% assign group = nil %}
             </ul>
-        </article>
+        </div>
     {% endfor %}
 </div>

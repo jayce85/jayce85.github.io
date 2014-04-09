@@ -196,9 +196,9 @@ h4, h5, h6 {
         margin: 0;
         color: #f06878;
         font-size: 2.5rem;
-    }
-    a {
-        color: #f06878;
+        a {
+            color: #f06878;
+        }
     }
     p {
         font-size: 1rem;
@@ -219,6 +219,7 @@ h4, h5, h6 {
 
     header {
         padding-bottom: 2rem;
+        position: relative;
         h2 {
             margin-top: 0;
             a {
@@ -309,17 +310,17 @@ pre {
         margin-top: 0;
     }
 
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .more-item {
+    .item {
         margin-bottom: 2rem;
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -461,9 +462,6 @@ pre {
                 background: #f88391;
             }
         }
-    }
-    .categories {
-        text-transform: capitalize;
     }
     .follow-me {
         @include inline-block-list(3px);

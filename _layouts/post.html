@@ -4,30 +4,22 @@ layoutname: post
 ---
 
 <div id="main" role="main" class="row clearfix">
-    <article class="column full">
+    <div class="column full">
 
         {{ content }}
 
-        <footer>
-            <div>
-                {% for tag in page.tags %}
-                    <a href="{{ site.url }}/tags/#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>
-                {% endfor %}
+        {% if page.share %}
+             <div class="social-share">
+                <!-- Twitter -->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}">Tweet</a>
+
+                <!-- Google + -->
+                <g:plusone size="medium"></g:plusone>
+
+                <!-- Facebook -->
+                <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></div>
             </div>
-
-            {% if page.share %}
-                 <div class="social-share">
-                    <!-- Twitter -->
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}">Tweet</a>
-
-                    <!-- Google + -->
-                    <g:plusone size="medium"></g:plusone>
-
-                    <!-- Facebook -->
-                    <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-type="button_count"></div>
-                </div>
-            {% endif %}
-        </footer>
+        {% endif %}
 
         {% if site.disqus_shortname and page.comments %}
             <section id="disqus_thread"></section>
@@ -37,7 +29,7 @@ layoutname: post
             <div class="read-more">
                 <h2>Read more</h2>
                 {% for post in site.related_posts limit:3 %}
-                    <div class="more-item">
+                    <div class="item">
                         <h3>
                             <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">&#x2736; {{ post.title }}</a>
                             &bull; <small>{{ post.date | date: "%B %d, %Y" }}</small>
@@ -55,6 +47,6 @@ layoutname: post
             </div>
         {% endif %}
 
-    </article>
+    </div>
 </div>
 
