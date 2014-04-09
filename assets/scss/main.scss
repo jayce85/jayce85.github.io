@@ -1,5 +1,34 @@
 @import "core";
 
+$header-bg-color: #a6d5c8;
+$header-symbol-bg-color: #f88391;
+
+$footer-bg-color: #a6d5c8;
+$footer-color: #45776a;
+$footer-link-color: #fff;
+
+$aside-title-bg-color: #f88391;
+$aside-title-color: #fff;
+
+$link-color: #4ea58d;
+$link-hover-color: #f06878;
+
+$pagination-color: #f6697a;
+$pagination-bg-color: #fdf4ec;
+
+$pagination-current-color: #fff;
+$pagination-current-bg-color: #a6d5c8;
+
+$nav-link-color: #fff;
+$nav-link-hover-color: #4ea58d;
+
+$nav-current-link-bg-color: #f88391;
+$nav-current-link-hover-color: #ffe605;
+
+$tags-bg-color: #a6d5c8;
+$tags-color: #fff;
+$tags-hover-bg-color: #f88391;
+
 /*
  * Body resets
  *
@@ -15,7 +44,7 @@ html {
 }
 
 a {
-    @include link-colors(#4ea58d, #f06878);
+    @include link-colors($link-color, $link-hover-color);
 }
 
 /*
@@ -62,7 +91,7 @@ h4, h5, h6 {
  */
 
 .header-wrap {
-    background: #a6d5c8;
+    background: $header-bg-color;
     margin-bottom: 3rem;
     position: relative;
     &:after {
@@ -82,7 +111,7 @@ h4, h5, h6 {
         font: normal 4rem 'Cookie', Helvetica, sans-serif;
         margin: 0;
         .symbol {
-            color: #f88391;
+            color: $header-symbol-bg-color;
             font-size: 2rem;
         }
         a {
@@ -130,9 +159,9 @@ h4, h5, h6 {
  */
 
 .footer-wrap {
-    background: #a6d5c8;
+    background: $footer-bg-color;
     position: relative;
-    color: #45776a;
+    color: $footer-color;
     &:before {
         content: "";
         position: absolute;
@@ -146,7 +175,7 @@ h4, h5, h6 {
     padding-top: 2rem;
     padding-bottom: 2rem;
     a {
-        color: #fff;
+        color: $footer-link-color;
     }
 }
 
@@ -173,13 +202,13 @@ h4, h5, h6 {
         height: 28px;
         line-height: 28px;
         padding: 0 10px;
-        background: #fdf4ec;
-        color: #F6697A;
+        background: $pagination-bg-color;
+        color: $pagination-color;
     }
     a:hover, .current {
         text-decoration: none;
-        background: #a6d5c8;
-        color: #fff;
+        background: $pagination-current-bg-color;
+        color: $pagination-current-color;
     }
 }
 
@@ -194,10 +223,10 @@ h4, h5, h6 {
     margin-bottom: 1rem;
     h1 {
         margin: 0;
-        color: #f06878;
+        color: $link-hover-color;
         font-size: 2.5rem;
         a {
-            color: #f06878;
+            color: $link-hover-color;
         }
     }
     p {
@@ -223,7 +252,7 @@ h4, h5, h6 {
         h2 {
             margin-top: 0;
             a {
-                color: #f06878;
+                color: $link-hover-color;
             }
         }
     }
@@ -306,7 +335,7 @@ pre {
     margin-top: 2rem;
 
     h2 {
-        color: #f06878;
+        color: $link-hover-color;
         margin-top: 0;
     }
 
@@ -370,7 +399,7 @@ pre {
     top: 50%;
     margin-top: -10px;
     a {
-        @include link-colors(#fff, #4ea58d);
+        @include link-colors($nav-link-color, $nav-link-hover-color);
         display: block;
         padding: 3px 12px;
         text-decoration: none;
@@ -378,9 +407,9 @@ pre {
     .selected a {
         @include border-radius(3px);
         &:hover {
-            color: #ffe605;
+            color: $nav-current-link-hover-color;
         }
-        background: #f88391;
+        background: $nav-current-link-bg-color;
     }
 }
 
@@ -416,8 +445,8 @@ pre {
         position: relative;
         margin-top: 0;
         padding-left: 10px;
-        background: #f88391;
-        color: #fff;
+        background: $aside-title-bg-color;
+        color: $aside-title-color;
         height: 36px;
         line-height: 36px;
         margin-bottom: 1rem;
@@ -453,13 +482,13 @@ pre {
         .tag {
             @include inline-block;
             text-decoration: none;
-            background: #a6d5c8;
-            color: #fff;
+            background: $tags-bg-color;
+            color: $tags-color;
             white-space: nowrap;
             padding: 4px 15px;
             margin-bottom: 6px;
             &:hover {
-                background: #f88391;
+                background: $tags-hover-bg-color;
             }
         }
     }

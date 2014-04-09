@@ -102,6 +102,7 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
             <li><a target="_blank" href="{{ site.url }}/atom.xml"><img src="{{ site.url }}/public/images/social/rss.png" alt="rss"></a></li>
         </ul>
     </div>
+    {% if site.posts.size > 0 %}
     <div class="side-box">
         <h5>Recent Posts</h5>
         <ul class="recent-posts">
@@ -113,6 +114,8 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
             <li><em><a href="{{ site.url }}/posts">More&hellip;</a></em></li>
         </ul>
     </div>
+    {% endif %}
+    {% if site.categories.size > 0 %}
     <div class="side-box">
         <h5>Categories</h5>
         <ul class="categories">
@@ -130,6 +133,8 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
             <li><em><a href="{{ site.url }}/categories">More&hellip;</a></em></li>
         </ul>
     </div>
+    {% endif %}
+    {% if site.tags.size > 0 %}
     <div class="side-box">
         <h5>Tags</h5>
         <ul class="tags">
@@ -147,4 +152,5 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
             <li><em><a href="{{ site.url }}/tags">More&hellip;</a></em></li>
         </ul>
     </div>
+    {% endif %}
 </aside>
