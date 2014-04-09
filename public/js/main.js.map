@@ -1,1 +1,1 @@
-{"version":3,"file":"main.js.map","sources":["main.js"],"names":["$","document","ready","fitVids"],"mappings":"AAAAA,EAAEC,UAAUC,MAAM,WAChB,MAAOF,GAAE,WAAWG"}
+{"version":3,"file":"main.js.map","sources":["main.js"],"names":["$","document","ready","fitVids","tinyNav"],"mappings":"AAAAA,EAAEC,UAAUC,MAAM,WAEhB,MADAF,GAAE,WAAWG,UACNH,EAAE,QAAQI"}

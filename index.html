@@ -73,5 +73,73 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 </div>
 
 <aside class="column third">
-    Hello world
+    <div class="side-box">
+        <h5>Follow Me</h5>
+        <ul class="follow-me">
+            {% if site.owner.github %}
+                <li><a target="_blank" href="https://www.github.com/{{ site.owner.github }}"><img src="{{ site.url }}/public/images/social/github.png" alt="github"></a></li>
+            {% endif %}
+            {% if site.owner.facebook %}
+                <li><a target="_blank" href="https://www.facebook.com/{{ site.owner.facebook }}"><img src="{{ site.url }}/public/images/social/facebook.png" alt="facebook"></a></li>
+            {% endif %}
+            {% if site.owner.twitter %}
+                <li><a target="_blank" href="https://www.twitter.com/{{ site.owner.twitter }}"><img src="{{ site.url }}/public/images/social/twitter.png" alt="twitter"></a></li>
+            {% endif %}
+            {% if site.owner.linkedin %}
+                <li><a target="_blank" href="https://www.linkedin.com/in/{{ site.owner.linkedin }}"><img src="{{ site.url }}/public/images/social/linkedin.png" alt="linkedin"></a></li>
+            {% endif %}
+            {% if site.owner.flickr %}
+                <li><a target="_blank" href="https://www.flickr.com/{{ site.owner.flickr }}"><img src="{{ site.url }}/public/images/social/flickr.png" alt="flickr"></a></li>
+            {% endif %}
+            {% if site.owner.tumblr %}
+                <li><a target="_blank" href="https://{{ site.owner.tumblr }}.tumblr.com"><img src="{{ site.url }}/public/images/social/tumblr.png" alt="tumblr"></a></li>
+            {% endif %}
+            <li><a target="_blank" href="{{ site.url }}/atom.xml"><img src="{{ site.url }}/public/images/social/rss.png" alt="rss"></a></li>
+        </ul>
+    </div>
+    <div class="side-box">
+        <h5>Recent Posts</h5>
+        <ul class="recent-posts">
+            {% for post in site.posts limit:5 %}
+                <li>
+                    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+            <li><em><a href="{{ site.url }}/posts">More&hellip;</a></em></li>
+        </ul>
+    </div>
+    <div class="side-box">
+        <h5>Categories</h5>
+        <ul class="categories">
+            {% assign categories_list = site.categories %}
+            {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                    <li><a href="{{ site.url }}/categories/#{{ category }}" title="{{ category }}">{{ category }}</a></li>
+                {% endfor %}
+            {% else %}
+                {% for category in categories_list %}
+                    <li><a href="{{ site.url }}/categories/#{{ category[0] }}" title="{{ category[0] }}">{{ category[0] }}</a></li>
+                {% endfor %}
+            {% endif %}
+            {% assign categories_list = nil %}
+            <li><em><a href="{{ site.url }}/categories">More&hellip;</a></em></li>
+        </ul>
+    </div>
+    <div class="side-box">
+        <h5>Tags</h5>
+        <ul class="tags">
+            {% assign tags_list = site.tags %}
+                {% if tags_list.first[0] == null %}
+                    {% for tag in tags_list %}
+                        <li><a class="tag" href="{{ site.url }}/tags/#{{ tag }}" class="tag">{{ tag }}</a></li>
+                    {% endfor %}
+                {% else %}
+                    {% for tag in tags_list %}
+                        <li><a class="tag" href="{{ site.url }}/tags/#{{ tag[0] }}" class="tag">{{ tag[0] }}</a></li>
+                    {% endfor %}
+                {% endif %}
+            {% assign tags_list = nil %}
+            <li><em><a href="{{ site.url }}/tags">More&hellip;</a></em></li>
+        </ul>
+    </div>
 </aside>

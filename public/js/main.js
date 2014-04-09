@@ -1,1 +1,1 @@
-$(document).ready(function(){return $("article").fitVids()});
+$(document).ready(function(){return $("article").fitVids(),$("#nav").tinyNav()});
