@@ -24,6 +24,10 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
                         {% unless forloop.last %}, {% endunless %}
                     {% endfor %}
                 {% endif %}
+
+                {% if site.disqus_shortname and post.comments %}
+                    &bull; <a href="{{ site.url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
+                {% endif %}
             </div>
         </header>
 
