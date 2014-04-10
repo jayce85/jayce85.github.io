@@ -15,6 +15,8 @@
     </script>
 {% endif %}
 
-{% include disqus_comments.html %}
+{% if page.comments %}{% include disqus_comments.html %}{% endif %}
+
+{% include disqus_count.html %}
 
 {% if page.share %}{% include social_sharing.html %}{% endif %}
