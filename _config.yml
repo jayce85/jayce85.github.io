@@ -5,7 +5,7 @@ redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 title: Pauline Te
-description: Pauline Te's Blog
+description: Pauline Te
 disqus_shortname: jayce85
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url: http://www.pauline-te.com
