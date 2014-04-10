@@ -11,7 +11,6 @@ layout: nil
     <author>
         <name>{{ site.owner.name }}</name>
         <uri>{{ site.url }}/</uri>
-        <email>{{ site.owner.email }}</email>
     </author>
 
     {% for post in site.posts limit:20 %}
@@ -31,7 +30,6 @@ layout: nil
             <author>
                 <name>{{ site.owner.name }}</name>
                 <uri>{{ site.url }}</uri>
-                <email>{{ site.owner.email }}</email>
             </author>
             <content type="html">{{ post.content | xml_escape }}</content>
         </entry>
