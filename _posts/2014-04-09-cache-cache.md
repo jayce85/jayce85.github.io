@@ -4,7 +4,7 @@ title: Cache-cache
 description:
 date: 2014-04-09 21:47
 modified:
-tags: [pyélonéphrite, infection urinaire]
+tags: [mode furtif]
 categories: [Médecine]
 image:
   feature:
