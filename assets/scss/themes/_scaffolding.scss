@@ -1,0 +1,64 @@
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    @media (min-width: 38rem) {
+        font-size: 1rem;
+    }
+}
+
+body {
+    color: $body-color;
+}
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+    max-width: 70rem;
+    padding-left:  2rem;
+    padding-right: 2rem;
+}
+
+.content {
+    margin-bottom: 1rem;
+}
+
+/*
+ * Social Share
+ *
+ */
+
+.social-share {
+    margin-top: 2rem;
+}
+
+.fb-share-button {
+    vertical-align: top !important;
+    height: 20px !important;
+    span {
+        vertical-align: top !important;
+    }
+}
+
+/*
+ * Disqus
+ *
+ */
+
+#disqus_thread {
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/*
+ * FitVids
+ *
+ */
+
+.fluid-width-video-wrapper {
+    margin-bottom: 1rem;
+}

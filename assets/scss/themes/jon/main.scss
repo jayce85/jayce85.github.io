@@ -1,0 +1,96 @@
+@import "themes/core";
+@import "themes/jon/variables";
+
+@import "themes/bootstrap";
+
+// Override here
+@import url("//fonts.googleapis.com/css?family=Raleway:300");
+
+html {
+    font-family: "Raleway", sans-serif;
+}
+
+/*
+ * Articles
+ *
+ */
+
+.index article {
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Header
+ *
+ */
+
+.header {
+    h1 {
+        @include inline-block;
+        font-family: 'Raleway', cursive;
+        font-size: 3rem;
+        position: relative;
+        &:after {
+            content: $header-symbol;
+            position: absolute;
+            right: -11rem;
+            font-size: 8rem;
+            bottom: 0rem;
+            color: $header-symbol-color;
+            @media (max-width: 391px) {
+                visibility: hidden;
+            }
+        }
+        a {
+            &:after {
+                right: -3.1rem;
+                font-size: 2rem;
+                bottom: 0.8rem;
+                @media (max-width: 391px) {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+/*
+ * Aside
+ *
+ */
+
+.side-box {
+    h5 {
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/*
+ * Page heading
+ *
+ */
+
+.page-heading {
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Read more
+ *
+ */
+
+.read-more {
+    border-top: 1px solid #eee;
+    .item h3 a:after {
+        top: 2px;
+    }
+}
+
+/*
+ * Disqus
+ *
+ */
+
+#disqus_thread {
+    border-top: 1px solid #eee;
+}

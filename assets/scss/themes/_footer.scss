@@ -1,0 +1,23 @@
+/*
+ * Footer
+ *
+ */
+
+.footer-wrap {
+    background: $footer-bg-color;
+    color: $footer-color;
+}
+
+.footer {
+    white-space: nowrap;
+    line-height: 88px;
+    a {
+        color: $footer-link-color;
+    }
+    .column {
+        margin: 0;
+    }
+}
+
+@include sticky-footer(88px, "#root", "#push-footer", "#footer");
+

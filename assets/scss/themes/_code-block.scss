@@ -1,0 +1,27 @@
+/*
+ * Code Blocks
+ *
+ */
+
+pre {
+    overflow: auto;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+
+    &::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        @include border-bottom-left-radius(6px);
+        @include border-bottom-right-radius(6px);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        @include border-radius(6px);
+        background: #ccc;
+    }
+}

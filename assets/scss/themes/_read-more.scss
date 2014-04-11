@@ -1,0 +1,41 @@
+/*
+ * Read more
+ *
+ */
+
+.read-more {
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .item {
+        margin-bottom: 2rem;
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+
+            @if $header-symbol != "" {
+                a {
+                    @include inline-block;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    &:after {
+                        content: $header-symbol;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

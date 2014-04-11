@@ -1,0 +1,84 @@
+/*
+ * Aside
+ *
+ */
+
+.side-box {
+    padding-bottom: 1rem;
+    h5 {
+        position: relative;
+        margin-top: 0;
+        padding-left: 10px;
+        background: $aside-title-bg-color;
+        color: $aside-title-color;
+        height: 36px;
+        line-height: 36px;
+        margin-bottom: 1rem;
+    }
+    ul {
+        font-size: 0.8rem;
+        list-style-position: inside;
+        list-style-type: circle;
+        padding-left: 20px;
+        li {
+            padding-bottom: 8px;
+        }
+    }
+    .follow-me {
+        a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            &:hover {
+                @include opacity(0.7);
+            }
+        }
+        .github {
+            background: url(/public/images/social/webicon-github.png) no-repeat;
+            background-image: url(/public/images/social/webicon-github.svg), none;
+        }
+        .facebook {
+            background: url(/public/images/social/webicon-facebook.png) no-repeat;
+            background-image: url(/public/images/social/webicon-facebook.svg), none;
+        }
+        .twitter {
+            background: url(/public/images/social/webicon-twitter.png) no-repeat;
+            background-image: url(/public/images/social/webicon-twitter.svg), none;
+        }
+        .linkedin {
+            background: url(/public/images/social/webicon-linkedin.png) no-repeat;
+            background-image: url(/public/images/social/webicon-linkedin.svg), none;
+        }
+        .flickr {
+            background: url(/public/images/social/webicon-flickr.png) no-repeat;
+            background-image: url(/public/images/social/webicon-flickr.svg), none;
+        }
+        .tumblr {
+            background: url(/public/images/social/webicon-tumblr.png) no-repeat;
+            background-image: url(/public/images/social/webicon-tumblr.svg), none;
+        }
+        .rss {
+            background: url(/public/images/social/webicon-rss.png) no-repeat;
+            background-image: url(/public/images/social/webicon-rss.svg), none;
+        }
+    }
+    .tags {
+        @include inline-block-list(3px);
+        .tag {
+            @include inline-block;
+            text-decoration: none;
+            background: $tags-bg-color;
+            color: $tags-color;
+            white-space: nowrap;
+            padding: 4px 15px;
+            margin-bottom: 6px;
+            &:hover {
+                background: $tags-hover-bg-color;
+            }
+        }
+    }
+    .follow-me {
+        @include inline-block-list(3px);
+    }
+}

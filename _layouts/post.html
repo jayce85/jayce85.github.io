@@ -25,13 +25,13 @@ layoutname: post
             <section id="disqus_thread"></section>
         {% endif %}
 
-        {% if site.related_posts.size %}
+        {% if site.related_posts.size > 0 %}
             <div class="read-more">
                 <h2>Read more</h2>
                 {% for post in site.related_posts limit:3 %}
                     <div class="item">
                         <h3>
-                            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">&#x2736; {{ post.title }}</a>
+                            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                             &bull; <small>{{ post.date | date: "%B %d, %Y" }}</small>
                         </h3>
                         <p>

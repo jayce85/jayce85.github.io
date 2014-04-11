@@ -35,7 +35,7 @@ tags: [pauline te, medecine, internat, jayce85]
         {% if post.image.feature %}
             <div class="page-image">
                 {% if post.image.credit %}
-                    <div class="image-credit">Image source: {% if post.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ post.image.credit }}{% if post.image.creditlink %}</a>{% endif %}</div>
+                    <div class="image-credit">Image source: {% if post.image.creditlink %}<a target="_blank" href="{{ post.image.creditlink }}">{% endif %}{{ post.image.credit }}{% if post.image.creditlink %}</a>{% endif %}</div>
                 {% endif %}
                 <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}">
             </div>
@@ -86,24 +86,24 @@ tags: [pauline te, medecine, internat, jayce85]
         <h5>Follow Me</h5>
         <ul class="follow-me">
             {% if site.owner.github %}
-                <li><a target="_blank" href="https://www.github.com/{{ site.owner.github }}"><img src="{{ site.url }}/public/images/social/github.png" alt="github"></a></li>
+                <li><a class="github" target="_blank" href="https://www.github.com/{{ site.owner.github }}"></a></li>
             {% endif %}
             {% if site.owner.facebook %}
-                <li><a target="_blank" href="https://www.facebook.com/{{ site.owner.facebook }}"><img src="{{ site.url }}/public/images/social/facebook.png" alt="facebook"></a></li>
+                <li><a class="facebook" target="_blank" href="https://www.facebook.com/{{ site.owner.facebook }}"></a></li>
             {% endif %}
             {% if site.owner.twitter %}
-                <li><a target="_blank" href="https://www.twitter.com/{{ site.owner.twitter }}"><img src="{{ site.url }}/public/images/social/twitter.png" alt="twitter"></a></li>
+                <li><a class="twitter" target="_blank" href="https://www.twitter.com/{{ site.owner.twitter }}"></a></li>
             {% endif %}
             {% if site.owner.linkedin %}
-                <li><a target="_blank" href="https://www.linkedin.com/in/{{ site.owner.linkedin }}"><img src="{{ site.url }}/public/images/social/linkedin.png" alt="linkedin"></a></li>
+                <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/{{ site.owner.linkedin }}"></a></li>
             {% endif %}
             {% if site.owner.flickr %}
-                <li><a target="_blank" href="https://www.flickr.com/{{ site.owner.flickr }}"><img src="{{ site.url }}/public/images/social/flickr.png" alt="flickr"></a></li>
+                <li><a class="flickr" target="_blank" href="https://www.flickr.com/{{ site.owner.flickr }}"></a></li>
             {% endif %}
             {% if site.owner.tumblr %}
-                <li><a target="_blank" href="https://{{ site.owner.tumblr }}.tumblr.com"><img src="{{ site.url }}/public/images/social/tumblr.png" alt="tumblr"></a></li>
+                <li><a class="tumblr" target="_blank" href="https://{{ site.owner.tumblr }}.tumblr.com"></a></li>
             {% endif %}
-            <li><a target="_blank" href="{{ site.url }}/atom.xml"><img src="{{ site.url }}/public/images/social/rss.png" alt="rss"></a></li>
+            <li><a class="rss" target="_blank" href="{{ site.url }}/atom.xml"></a></li>
         </ul>
     </div>
     {% if site.posts.size > 0 %}

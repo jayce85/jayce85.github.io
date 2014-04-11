@@ -1,0 +1,30 @@
+/*
+ * Pagination
+ *
+ */
+
+.pagination {
+    @include horizontal-list(4px);
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 3rem;
+    li {
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+    }
+    a, span {
+        @include border-radius(3px);
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 10px;
+        background: $pagination-bg-color;
+        color: $pagination-color;
+    }
+    a:hover, .current {
+        text-decoration: none;
+        background: $pagination-current-bg-color;
+        color: $pagination-current-color;
+    }
+}
