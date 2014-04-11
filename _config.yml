@@ -7,6 +7,9 @@ redcarpet:
 title: Pauline Te
 description: Pauline Te
 disqus_shortname: jayce85
+
+theme: jayce
+
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url: http://www.pauline-te.com
 
@@ -14,7 +17,7 @@ url: http://www.pauline-te.com
 owner:
     name: Pauline Te
     avatar: avatar.jpg
-    bio: 
+    bio:
     # Social networking links used in footer. Update and remove as you like.
     twitter:
     facebook: pauline.te
