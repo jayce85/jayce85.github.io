@@ -64,7 +64,7 @@
                         {% if page.image.feature %}
                             <div class="page-image">
                                 {% if page.image.credit %}
-                                    <div class="image-credit">Image source: {% if page.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ page.image.credit }}{% if page.image.creditlink %}</a>{% endif %}</div>
+                                    <div class="image-credit">Image source: {% if page.image.creditlink %}<a target="_blank" href="{{ page.image.creditlink }}">{% endif %}{{ page.image.credit }}{% if page.image.creditlink %}</a>{% endif %}</div>
                                 {% endif %}
                                 <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
                             </div>

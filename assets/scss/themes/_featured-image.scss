@@ -1,0 +1,29 @@
+/*
+ * Featured image
+ *
+ */
+
+.page-image {
+    @include border-radius(3px);
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;
+    margin-bottom: 2rem;
+    .image-credit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: .5rem .7rem;
+        font-size: .75rem;
+        color: #fff;
+        background-color: rgba(34,34,34,0.5);
+        text-align: right;
+        a {
+            color: #fff;
+        }
+    }
+    img {
+        margin: 0;
+        width: 100%;
+    }
+}

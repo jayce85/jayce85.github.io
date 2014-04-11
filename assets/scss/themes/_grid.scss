@@ -1,0 +1,29 @@
+/*
+ * Grid
+ *
+ */
+
+
+.column {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    // span {
+    //     padding: 1rem;
+    //     display: block;
+    //     background: #eee;
+    //     border: 3px dashed black;
+    // }
+}
+
+@media (min-width: 38rem) {
+    .column {
+        float: left;
+    }
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 24.95%; }
+    .column.flow-opposite { float: right; }
+}

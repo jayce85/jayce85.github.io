@@ -1,0 +1,17 @@
+/*
+ * Articles
+ *
+ */
+
+.index article {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    header {
+        padding-bottom: 2rem;
+        position: relative;
+        h2 {
+            margin-top: 0;
+        }
+    }
+}

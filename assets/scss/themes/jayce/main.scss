@@ -1,0 +1,154 @@
+@import "themes/core";
+@import "themes/jayce/variables";
+
+@import "themes/bootstrap";
+
+// Override here
+@import url("//fonts.googleapis.com/css?family=Cookie");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300");
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+/*
+ * Articles
+ *
+ */
+
+.index article {
+    background: url("/public/images/dotted.png") left bottom repeat-x;
+    header {
+        h2 {
+            a {
+                color: $link-hover-color;
+            }
+        }
+    }
+}
+
+/*
+ * Aside
+ *
+ */
+
+.side-box {
+    h5 {
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid transparent;
+            border-right: 18px solid #fff;
+        }
+    }
+    .follow-me {
+        a {
+            width: 33px;
+            height: 33px;
+        }
+        .github {
+            background-image: url(/public/images/social/jayce/github.png);
+        }
+        .facebook {
+            background-image: url(/public/images/social/jayce/facebook.png);
+        }
+        .twitter {
+            background-image: url(/public/images/social/jayce/twitter.png);
+        }
+        .linkedin {
+            background-image: url(/public/images/social/jayce/linkedin.png);
+        }
+        .flickr {
+            background-image: url(/public/images/social/jayce/flickr.png);
+        }
+        .tumblr {
+            background-image: url(/public/images/social/jayce/tumblr.png);
+        }
+        .rss {
+            background-image: url(/public/images/social/jayce/rss.png);
+        }
+    }
+}
+
+/*
+ * Header
+ *
+ */
+
+.header-wrap {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        border-bottom: 1px dashed #fff;
+        width: 100%;
+    }
+}
+
+.header {
+    h1 {
+        font-family: 'Cookie';
+    }
+}
+
+
+/*
+ * Footer
+ *
+ */
+
+.footer-wrap {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        border-top: 1px dashed #fff;
+        width: 100%;
+    }
+}
+
+
+/*
+ * Page heading
+ *
+ */
+
+.page-heading {
+    background: url("/public/images/dotted.png") left bottom repeat-x;
+    h1 {
+        color: $link-hover-color;
+        a {
+            color: $link-hover-color;
+        }
+    }
+}
+
+/*
+ * Read more
+ *
+ */
+
+.read-more {
+    background: url("/public/images/dotted.png") left top repeat-x;
+
+    h2 {
+        color: $link-hover-color;
+    }
+}
+
+/*
+ * Disqus
+ *
+ */
+
+#disqus_thread {
+    background: url("/public/images/dotted.png") left top repeat-x;
+}
