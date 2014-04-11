@@ -4,6 +4,8 @@ pygments: true
 redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
+theme: jon
+
 title: Your Name
 description: Your blog
 disqus_shortname:
