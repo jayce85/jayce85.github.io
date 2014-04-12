@@ -29,6 +29,9 @@ owner:
     # For Google Authorship https://plus.google.com/authorship
     google_plus:
 
+# For Facebook Sharing
+facebook_app_id:
+
 # Background image to be tiled on all pages
 background:
 
